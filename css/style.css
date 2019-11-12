@@ -752,24 +752,24 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 0 20px 20px 20px;
 }
 
-/* Services Section
+/* oqfazemos Section
 --------------------------------*/
 
-#services {
+#oqfazemos {
   background: #fff;
   background-size: cover;
   padding: 60px 0 40px 0;
 }
 
-#services .box {
+#oqfazemos .box {
   margin-bottom: 30px;
 }
 
-#services .icon {
+#oqfazemos .icon {
   float: left;
 }
 
-#services .icon i {
+#oqfazemos .icon i {
   color: #FFD700
 ;
   font-size: 36px;
@@ -777,23 +777,31 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: 0.5s;
 }
 
-#services .title {
+#oqfazemos h4 {
   margin-left: 60px;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
+  color: black;
 }
 
-#services .title a {
+#oqfazemos h4:hover
+{
+  color: #FFD700;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#oqfazemos .title a {
   color: #111;
 }
 
-#services .box:hover .title a {
+#oqfazemos .box:hover .title a {
   color: #FFD700
 ;
 }
 
-#services .description {
+#oqfazemos .description {
   font-size: 14px;
   margin-left: 60px;
   line-height: 24px;
