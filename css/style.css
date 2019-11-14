@@ -1084,6 +1084,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-transform: uppercase;
 }
 
+#portfolio h4
+{
+  color: #333;  
+}
+
+#portfolio h4:hover
+{
+    color: #FFD700;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
 /* Clients Section
 --------------------------------*/
 
