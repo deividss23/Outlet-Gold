@@ -143,7 +143,8 @@ h6 {
 }
 
 #header #logo {
-  float: left;
+
+  padding-bottom: 20px;
 }
 
 #header #logo h1 {
@@ -165,8 +166,12 @@ h6 {
 }
 
 #header #logo img {
-  padding: 0;
-  margin: 0;
+  line-height: 92px;
+  padding-bottom: 20px;
+}
+
+#header a 
+{
 }
 
 /*--------------------------------------------------------------
@@ -240,6 +245,7 @@ h6 {
   width: 80%;
   margin: 0 auto 30px auto;
   color: #fff;
+  font-size: 24px;
 }
 
 #intro .carousel-fade {
@@ -611,7 +617,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 #valores {
-  background: black;
   border-radius: 20px;
 }
 
@@ -623,7 +628,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-image: linear-gradient(0deg, #000000 0%, #242323 50%, #000000 100%);
 }
 
-#valores i {
+#valores img {
   color: #FFD700
 ;
   font-size: 48px;
@@ -633,9 +638,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #valores h4 {
   font-weight: 400;
-  margin: 15px 0;
+
   font-size: 18px;
-  color: #FFF;
+  color: black;
 }
 
 
@@ -645,10 +650,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #valores p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
-  color: #fff;
+  color: black;
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 
@@ -756,7 +762,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 #oqfazemos {
-  background: #fff;
   background-size: cover;
   padding: 60px 0 40px 0;
 }
@@ -806,6 +811,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-left: 60px;
   line-height: 24px;
   margin-bottom: 0;
+}
+
+#oqfazemos .center
+{
+   vertical-align: middle;
+   border: 3px solid black;
+   margin: auto auto auto auto;
 }
 
 /* Call To Action Section
@@ -1104,36 +1116,177 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 60px 0;
 }
 
-#clients img {
-  max-width: 100%;
-  opacity: 0.5;
-  transition: 0.3s;
-  padding: 15px 0;
-}
-
-#clients img:hover {
-  opacity: 1;
-}
-
-#clients .owl-nav,
-#clients .owl-dots {
-  margin-top: 5px;
+#clients #clients-flters {
+  padding: 0;
+  margin: 5px 0 35px 0;
+  list-style: none;
   text-align: center;
 }
 
-#clients .owl-dot {
+#clients #clients-flters li {
+  cursor: pointer;
+  margin: 15px 15px 15px 0;
   display: inline-block;
-  margin: 0 5px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd;
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #666666;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background: #fff;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
-#clients .owl-dot.active {
-  background-color: #FFD700
+#clients #clients-flters li:hover,
+#clients #clients-flters li.filter-active {
+  background: #FFD700
+;
+  color: #fff;
+}
+
+#clients #clients-flters li:last-child {
+  margin-right: 0;
+}
+
+#clients .clients-wrap {
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+#clients .clients-wrap:hover {
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+#clients .clients-item {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+}
+
+#clients .clients-item figure {
+  background: #000;
+  overflow: hidden;
+  height: 240px;
+  position: relative;
+  border-radius: 4px 4px 0 0;
+  margin: 0;
+}
+
+#clients .clients-item figure:hover img {
+  opacity: 0.4;
+  transition: 0.3s;
+}
+
+#clients .clients-item figure .link-preview,
+#clients .clients-item figure .link-details {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  line-height: 1;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.2s linear;
+}
+
+#clients .clients-item figure .link-preview i,
+#clients .clients-item figure .link-details i {
+  padding-top: 6px;
+  font-size: 22px;
+  color: #333;
+}
+
+#clients .clients-item figure .link-preview:hover,
+#clients .clients-item figure .link-details:hover {
+  background: #FFD700
 ;
 }
+
+#clients .clients-item figure .link-preview:hover i,
+#clients .clients-item figure .link-details:hover i {
+  color: #fff;
+}
+
+#clients .clients-item figure .link-preview {
+  left: calc(50% - 38px);
+  top: calc(50% - 18px);
+}
+
+#clients .clients-item figure .link-details {
+  right: calc(50% - 38px);
+  top: calc(50% - 18px);
+}
+
+#clients .clients-item figure:hover .link-preview {
+  opacity: 1;
+  left: calc(50% - 44px);
+}
+
+#clients .clients-item figure:hover .link-details {
+  opacity: 1;
+  right: calc(50% - 44px);
+}
+
+#clients .clients-item .clients-info {
+  background: #fff;
+  text-align: center;
+  padding: 30px;
+  height: 90px;
+  border-radius: 0 0 3px 3px;
+}
+
+#clients .clients-item .clients-info h4 {
+  font-size: 18px;
+  line-height: 1px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  padding-bottom: 0;
+}
+
+#clients .clients-item .clients-info h4 a {
+  color: #333;
+}
+
+#clients .clients-item .clients-info h4 a:hover {
+  color: #FFD700
+;
+}
+
+#clients .clients-item .clients-info p {
+  padding: 0;
+  margin: 0;
+  color: #b8b8b8;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+#clients h4
+{
+  color: #333;  
+}
+
+#clients h4:hover
+{
+    color: #FFD700;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#clients .port-client figure 
+{
+  background: white;
+  padding-top: 100px;
+}
+
+#clients .port-client figure:hover img {
+  opacity: 0.9;
+  cursor: pointer;  
+}
+
 
 /* Testimonials Section
 --------------------------------*/

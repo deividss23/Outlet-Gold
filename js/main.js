@@ -191,7 +191,7 @@
     autoplay: true,
     dots: true,
     loop: true,
-    responsive: { 0: { items: 2 }, 768: { items: 4 }, 900: { items: 6 }
+     responsive: { 0: { items: 2 }, 768: { items: 4 }, 900: { items: 6 }
     }
   });
 
@@ -205,3 +205,19 @@
 
 })(jQuery);
 
+$('.owl-carousel').owlCarousel({
+  navigation:true,
+  responsiveClass:true,
+  
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
